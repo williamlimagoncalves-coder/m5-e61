@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPremium - Sua Concessionária de Confiança</title>
+    <style>
+        /* Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e50914; /* Destaque vermelho */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a:hover {
+            color: #e50914;
+            transition: 0.3s;
+        }
+
+        /* Banner Principal (Hero Section) */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80') center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background-color: #e50914;
+            color: white;
+            padding: 10px 25px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #b20710;
+        }
+
+        /* Seção de Vitrine (Carros) */
+        .vitrine {
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .vitrine h2 {
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #1a1a1a;
+        }
+
+        .grid-carros {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card-carro {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card-carro:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-carro img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .info-carro {
+            padding: 15px;
+            text-align: left;
+        }
+
+        .info-carro h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .info-carro p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .preco {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #e50914;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">AutoPremium</div>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#estoque">Estoque</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Encontre o Carro dos Seus Sonhos</h1>
+        <p>As melhores ofertas de veículos novos e seminovos da região.</p>
+        <a href="#estoque"><button class="btn">Ver Estoque</button></a>
+    </section>
+
+    <section id="estoque" class="vitrine">
+        <h2>Destaques do Mês</h2>
+        <div class="grid-carros">
+            
+            <div class="card-carro">
+                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=500&q=80" alt="Carro Esportivo">
+                <div class="info-carro">
+                    <h3>Chevrolet Camaro V8</h3>
+                    <p>Ano: 2021 | 15.000 km | Automático</p>
+                    <span class="preco">R$ 380.000</span>
+                    <button class="btn" style="width: 100%;">Mais Detalhes</button>
+                </div>
+            </div>
+
+            <div class="card-carro">
+                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=500&q=80" alt="SUV Moderno">
+                <div class="info-carro">
+                    <h3>BMW X5 M-Sport</h3>
+                    <p>Ano: 2022 | 8.000 km | Automático</p>
+                    <span class="preco">R$ 520.000</span>
+                    <button class="btn" style="width: 100%;">Mais Detalhes</button>
+                </div>
+            </div>
+
+            <div class="card-carro">
+                <img src="https://images.unsplash.com/photo-1503376760367-12ea21644e55?auto=format&fit=crop&w=500&q=80" alt="Sedan de Luxo">
+                <div class="info-carro">
+                    <h3>Audi A6 Sedan</h3>
+                    <p>Ano: 2023 | 0 km | Automático</p>
+                    <span class="preco">R$ 415.000</span>
+                    <button class="btn" style="width: 100%;">Mais Detalhes</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 AutoPremium. Todos os direitos reservados.</p>
+        <p>Endereço: Av. das Automotivas, 1234 - Curitiba, PR</p>
+    </footer>
+
+</body>
+</html>
+
